@@ -1,0 +1,12 @@
+.buttons{
+    background-color: #CF8083;
+}
+
+.buttons:hover{
+    border:2px solid #CF8083;
+   
+}
+
+.table-head{
+    background-color: rgb(162, 207, 192);
+}
