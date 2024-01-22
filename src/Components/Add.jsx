@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Add() {
 
-        const [id,setId] = useState()
+        const [id,setId] = useState('')
         const [username,setUname] = useState('')
         const [firstname,setFname] = useState('')
         const [lastname,setLname] = useState('')
@@ -17,7 +17,7 @@ function Add() {
         const [city,setCity] = useState('')
         const [state,setState] = useState('')
 
-        const location = useNavigate()
+        const location = useNavigate('/')
 
         const base_url='http://localhost:8000/add-contact'
         const addContact = async(e) => {
