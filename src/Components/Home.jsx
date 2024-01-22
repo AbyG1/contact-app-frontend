@@ -34,7 +34,7 @@ function Home() {
 
 
          const deleteContact = async(id) => {
-            const result = await axios.delete(`${base_url}/delete-an-employee/${id}`)
+            const result = await axios.delete(`${base_url}/delete-a-contact/${id}`)
             console.log(result)
             fetchData()
             alert(result.data.message)
@@ -85,14 +85,14 @@ function Home() {
                                     <td onClick={() => navigate(`/view/${item.id}`)}>{item.email}</td>
                                     <td onClick={() => navigate(`/view/${item.id}`)}>{item.phone}</td>
                                     <td>
-                                        {index !== allContacts.length - 1 && (
+                                        
                                             <>
                                                 <Link to={`edit/${item.id}`}>
                                                     <i className='fa-solid fa-pen'></i>
                                                 </Link>
                                                 <i onClick={() => deleteContact(item.id)} className='fa-solid fa-trash p-2'></i>
                                             </>
-                                        )}
+                                        
                                     </td>
                                 </tr>
                             ))}
