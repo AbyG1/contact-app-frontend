@@ -9,10 +9,10 @@ function PageNotFound() {
   return (
     <div>
 
-        <Container>
+        <Container className='text-center'>
             <Row>
-              <Col sm={12} md={12} lg={12} xl={12}>
-                <img src={imgerror} alt="404 error image" className='img-fluid' /> 
+              <Col sm={12} md={12} lg={12} xl={12} className=''>
+                <img src={imgerror} style={{height:'100vh'}} alt="404 error image" className='img-fluid' /> 
               </Col>
 
 
