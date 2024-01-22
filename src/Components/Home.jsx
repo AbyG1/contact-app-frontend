@@ -4,7 +4,7 @@ import contactimg from '../assets/find-contacts.jpg'
 import contactbook from '../assets/contact-book.png'
 import { MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
 import axios, { all } from 'axios'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
@@ -26,7 +26,7 @@ function Home() {
             fetchData()
           },[])
 
-
+          const navigate = useNavigate();
 
 
   return (
@@ -65,28 +65,16 @@ function Home() {
                                     </tr>
                                 </MDBTableHead>
                                 <MDBTableBody>
-                                    {
-                                      allContacts.map((item)=>(
-                                        <tr>
-                                        <th scope='row'>{item.id}</th>
+                                        {allContacts.map((item) => (
+                                            <tr key={item.id} onClick={() => navigate(`/view/${item.id}`)} style={{ cursor: 'pointer' }}>
+                                                <th scope='row'>{item.id}</th>
                                                 <td>{item.username}</td>
-                                                <td>{item.firstname+' '+item.lastname}</td>
+                                                <td>{`${item.firstname} ${item.lastname}`}</td>
                                                 <td>{item.email}</td>
                                                 <td>{item.phone}</td>
-                                        </tr>
-
-
-
-
-                                      )
-                                        
-
-                                      )
-                                        
-                                        
-                                    }
-                                    
-                                </MDBTableBody>
+                                            </tr>
+                                        ))}
+                                    </MDBTableBody>
                         </MDBTable>
 
 
