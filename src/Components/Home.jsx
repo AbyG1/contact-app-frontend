@@ -4,7 +4,7 @@ import contactimg from '../assets/find-contacts.jpg'
 import contactbook from '../assets/contact-book.png'
 import { MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
 import axios, { all } from 'axios'
-
+import { Link } from 'react-router-dom';
 
 
 
@@ -45,7 +45,11 @@ function Home() {
 
                     <h2 className='p-3'><span><img src={contactbook} alt="contact book logo " style={{width:'40px'}} /></span>Contacts</h2>
                        <div className=''>
+
+                        <Link to={'/add'}>
                             <button className='btn buttons '>Add <i className="fa-solid fa-user-plus"></i> </button>
+                        </Link>
+                           
                             
                        </div>
                        <MDBTable hover className='my-3 '>
@@ -66,7 +70,7 @@ function Home() {
                                         <tr>
                                         <th scope='row'>{item.id}</th>
                                                 <td>{item.username}</td>
-                                                <td>{item.name.firstname+' '+item.name.lastname}</td>
+                                                <td>{item.firstname+' '+item.lastname}</td>
                                                 <td>{item.email}</td>
                                                 <td>{item.phone}</td>
                                         </tr>

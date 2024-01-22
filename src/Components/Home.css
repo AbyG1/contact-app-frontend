@@ -1,5 +1,6 @@
 .buttons{
     background-color: #CF8083;
+    border: 2px solid #CF8083;
 }
 
 .buttons:hover{
