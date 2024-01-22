@@ -31,8 +31,11 @@ function View() {
   return (
     <>
         <div className="container">
-            <div className="row">
+            <div className="row justify-content-center">
 
+              <div className="col-12">
+                <h2 className='text-center'>Contact Details</h2>
+              </div>
              
 
               <div className="col-md-3 my-4">
@@ -41,7 +44,7 @@ function View() {
 
               </div>
               <div className="col-md-4 my-5">
-              <h2 className='text-center'>Contact Details</h2>
+             
               <MDBCard>
                     <MDBListGroup >
                       <MDBListGroupItem>Username: {contactData.username}</MDBListGroupItem>
@@ -58,11 +61,7 @@ function View() {
 
               </div>
               <div className="col-md-4">
-                  <div className=' mt-2 text-center'>
-                    <button className='btn buttons me-4'>Delete Contact</button>
-                    <button className='btn buttons'>Edit Contact</button>
-                  </div>
-
+              
 
               </div>
 
